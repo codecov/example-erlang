@@ -6,4 +6,4 @@ script:
   - rebar3 eunit --cover
   - rebar3 cover --verbose
 after_success:
-  - bash <(curl -s https://codecov.io/bash)
+  - bash <(curl -s https://codecov.io/bash) -f _build/test/cover/eunit.coverdata
