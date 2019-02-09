@@ -1,0 +1,8 @@
+language: erlang
+sudo: false
+otp_release:
+  - 20.3.1
+script:
+  - rebar3 eunit
+after_success:
+  - bash <(curl -s https://codecov.io/bash)
