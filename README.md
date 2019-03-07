@@ -1,6 +1,6 @@
 Erlang Example
 ==============
-| [https://codecov.io/][1] | [@codecov][2] | [hello@codecov.io][3] |
+| [https://codecov.io/][1] | [@codecov][2] | [support@codecov.io][3] |
 | ------------------------ | ------------- | --------------------- |
 
 > Example of how to integrate with [Codecov.io][1] for your **awesome** Erlang project!
