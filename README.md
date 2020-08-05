@@ -1,57 +1,23 @@
-Erlang Example
-==============
-| [https://codecov.io/][1] | [@codecov][2] | [support@codecov.io][3] |
-| ------------------------ | ------------- | --------------------- |
+# [Codecov](https://codecov.io) Erlang Example
 
-> Example of how to integrate with [Codecov.io][1] for your **awesome** Erlang project!
+## Guide
 
-## See this repo's [Coverage Reports][4]
+### Travis Setup
 
-## Usage
-
-```sh
-pip install codecov
-codecov --token=<repo token>
-```
-
-## Private repositories
-Please provide your private repository token (found at Codecov) to upload reports.
-
-```
-export CODECOV_TOKEN=:token
-codecov
-# or
-codecov -t :token
-```
-
-# Some example CI providers
-
-### [![travis-org](https://avatars2.githubusercontent.com/u/639823?v=2&s=50)](https://travis-ci.org) Travis CI
-> Append to your `.travis.yml`
-
+Add to your `.travis.yml` file.
 ```yml
+language: erlang
 install:
     pip install codecov
 after_success:
-    codecov
+  - codecov
 ```
 
-> Note: No need to include a repository token for **public** repos on Travis
+## Caveats
+### Private Repo
+Repository tokens are required for (a) all private repos, (b) public repos not using Travis-CI, CircleCI or AppVeyor. Find your repository token at Codecov and provide via appending `-t <your upload token>` to you where you upload reports.
 
-
-### [![circleci](https://avatars0.githubusercontent.com/u/1231870?v=2&s=50)](https://circleci.com/) [Circle CI](https://circleci.com/).
-> Append to your `circle.yml` file
-
-```yml
-test:
-    post:
-        - pip install codecov && codecov
-```
-> Note: No need to include a repository token for **public** repos on CircleCI
-
-We are happy to help if you have any questions. Please contact email our Support at [support@codecov.io](mailto:support@codecov.io)
-
-[1]: https://codecov.io/
-[2]: https://twitter.com/codecov
-[3]: mailto:hello@codecov.io
-[4]: https://codecov.io/github/codecov/example-erlang
+## Links
+- [Community Boards](https://community.codecov.io)
+- [Support](https://codecov.io/support)
+- [Documentation](https://docs.codecov.io)
